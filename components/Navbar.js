@@ -1,6 +1,6 @@
 function Navbar(){
 
-    return <nav>
+    return <nav className="flex justify-center">
         <p>Wordle Helper</p>
     </nav>
 

@@ -1,6 +1,6 @@
 import {useRef} from "react";
 
-function Input(){
+function Input(props){
 
     const inputRef = useRef()
 
@@ -9,9 +9,9 @@ function Input(){
 
         const enteredInput = inputRef.current.value;
 
-        console.log(enteredInput);
-
-        callAPI(enteredInput);
+        //if no 'then' words.map in index.js will fail as words will be a promise before an array
+        callAPI(enteredInput)
+            .then(data => {props.onSubmit(data)});
     }
     
 
@@ -20,14 +20,16 @@ function Input(){
 			const res = await fetch(
 				`http://wordleapi.brian-spencer.com/?letters=${letters}`,
 			);
+            
 			const data = await res.json();
-			console.log(data);
+
+            return data.words;
 		} catch (err) {
 			console.log(err);
 		}
 	};
 
-    return <div>
+    return <div className="flex justify-center mb-5">
         <form onSubmit={submitHandler}>
             <input className="border-2 border-solid border-black" name="letters" type="text" size="10" ref={inputRef}></input>
             <button>Submit</button>
