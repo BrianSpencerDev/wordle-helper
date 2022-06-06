@@ -29,10 +29,10 @@ function Input(props){
 		}
 	};
 
-    return <div className="flex justify-center mb-5">
+    return <div className="flex justify-center my-5 text-black">
         <form onSubmit={submitHandler}>
             <input className="border-2 border-solid border-black" name="letters" type="text" size="10" ref={inputRef}></input>
-            <button>Submit</button>
+            <button className="text-white">Submit</button>
         </form>
     </div>
 

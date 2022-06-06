@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Input from '../components/Input'
 import Navbar from '../components/Navbar'
-import Word from '../components/Word'
 import Results from '../components/Results'
 
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className='w-full h-full'>
         <Navbar />
         <Input onSubmit={getWords}/>
         {console.log(words)}
