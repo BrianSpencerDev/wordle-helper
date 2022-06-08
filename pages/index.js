@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Input from '../components/Input'
 import Navbar from '../components/Navbar'
 import Results from '../components/Results'
+import Letter from '../components/Letter'
 
 export default function Home() {
 

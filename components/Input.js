@@ -1,4 +1,5 @@
 import {useRef} from "react";
+import Letter from "./Letter";
 
 function Input(props){
 
@@ -29,11 +30,12 @@ function Input(props){
 		}
 	};
 
-    return <div className="flex justify-center my-5 text-black">
-        <form onSubmit={submitHandler}>
-            <input className="border-2 border-solid border-black" name="letters" type="text" size="10" ref={inputRef}></input>
-            <button className="text-white">Submit</button>
-        </form>
+    return <div className="flex flex-row justify-center my-5">
+        <Letter />
+        <Letter />
+        <Letter />
+        <Letter />
+        <Letter />
     </div>
 
 }
