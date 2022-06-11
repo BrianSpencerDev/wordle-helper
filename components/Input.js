@@ -1,4 +1,4 @@
-import {useRef, useState} from "react";
+import {useRef, useState, useEffect} from "react";
 import Letter from "./Letter";
 
 function Input(props){
@@ -9,7 +9,7 @@ function Input(props){
 
     const [currInput, setCurrInput] = useState(0)
 
-    function submitHandler(e) {
+    function submitHandler() {
         // e.preventDefault();
 
         const enteredInput = "";
@@ -67,7 +67,9 @@ function Input(props){
         } else if (event.key === "Backspace") {
             onDelete();
         } else if (event.key === " " || event.key === '?'){
-            setCurrInput(currInput++)
+            if (currInput < 4) {
+                setCurrInput(currInput + 1);
+            }
         } else {
 
             console.log('hey')
@@ -85,14 +87,16 @@ function Input(props){
                 setCurrInput(currInput + 1);
             }
         }
-    }  
+    } 
+    
+    useEffect(() => {document.getElementById('input').focus();}, [])
 
-    return <div tabIndex="0" className="flex flex-row justify-center my-5" onKeyDown={handleKeyboard}>
-        <Letter pos={0} inputs={inputs} setInputs={setInputs}/>
-        <Letter pos={1} inputs={inputs} setInputs={setInputs}/>
-        <Letter pos={2} inputs={inputs} setInputs={setInputs}/>
-        <Letter pos={3} inputs={inputs} setInputs={setInputs}/>
-        <Letter pos={4} inputs={inputs} setInputs={setInputs}/>
+    return <div tabIndex="0" id="input" className="flex flex-row justify-center my-5 focus:outline-none" onKeyDown={handleKeyboard}>
+        <Letter pos={0} inputs={inputs} setInputs={setInputs} currInput={currInput}/>
+        <Letter pos={1} inputs={inputs} setInputs={setInputs} currInput={currInput}/>
+        <Letter pos={2} inputs={inputs} setInputs={setInputs} currInput={currInput}/>
+        <Letter pos={3} inputs={inputs} setInputs={setInputs} currInput={currInput}/>
+        <Letter pos={4} inputs={inputs} setInputs={setInputs} currInput={currInput}/>
     </div>
 
 }
