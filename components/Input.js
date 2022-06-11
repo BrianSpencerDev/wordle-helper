@@ -18,7 +18,7 @@ function Input(props){
     const callAPI = async (letters) => {
 		try {
 			const res = await fetch(
-				`http://wordleapi.brian-spencer.com/?letters=${letters}`,
+				`https://wordleapi.brian-spencer.com/?letters=${letters}`,
 			);
             
 			const data = await res.json();
