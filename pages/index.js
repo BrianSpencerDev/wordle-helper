@@ -24,8 +24,6 @@ export default function Home() {
       <main className='w-full h-full'>
         <Navbar />
         <Input onSubmit={getWords}/>
-        {console.log(words)}
-        {console.log(Array.isArray(words))}
         <Results words={words}/>
       </main>
     </div>
