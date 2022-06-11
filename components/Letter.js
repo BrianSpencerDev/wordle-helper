@@ -27,7 +27,7 @@ function Letter(props){
 
     
 
-    return <div className={`m-1.5 w-7 text-xl h-full font-bold border border-gray ${color}`} onClick={handleClick}>
+    return <div className={`flex content-center justify-center pb-1 m-1.5 w-16 text-6xl h-full font-bold border border-gray ${color}`} onClick={handleClick}>
         {input.letter}
     </div>
 

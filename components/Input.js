@@ -3,7 +3,6 @@ import Letter from "./Letter";
 
 function Input(props){
 
-    const inputRef = useRef()
 
     const [inputs, setInputs] = useState([{letter:'?', color: 'gray'}, {letter:'?', color: 'gray'},
         {letter:'?', color: 'gray'}, {letter:'?', color: 'gray'}, {letter:'?', color: 'gray'}])
@@ -11,9 +10,19 @@ function Input(props){
     const [currInput, setCurrInput] = useState(0)
 
     function submitHandler(e) {
-        e.preventDefault();
+        // e.preventDefault();
 
-        const enteredInput = inputRef.current.value;
+        const enteredInput = "";
+
+        for (const input of inputs) {
+            if (input.color === 'yellow'){
+                enteredInput += input.letter.toLowerCase();
+            }
+            else {
+                enteredInput += input.letter;
+            }
+            
+        }
 
         //if no 'then' words.map in index.js will fail as words will be a promise before an array
         callAPI(enteredInput)
