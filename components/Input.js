@@ -11,7 +11,6 @@ function Input(props){
 
     const submitHandler = useCallback( 
         () => {
-        // e.preventDefault();
 
             const enteredInput = "";
 
@@ -65,35 +64,6 @@ function Input(props){
         },
         [currInput, inputs]
     )
-
-    // function handleKeyboard(event){
-
-    //     if (event.key === "Enter") {
-    //         submitHandler();
-    //     } else if (event.key === "Backspace") {
-    //         onDelete();
-    //     } else if (event.key === " " || event.key === '?'){
-    //         if (currInput < 4) {
-    //             setCurrInput(currInput + 1);
-    //         }
-    //     } else {
-
-    //         console.log('hey')
-
-    //         const letter = event.key.toUpperCase()
-
-    //         const newArray = [...inputs];
-
-    //         newArray[currInput].letter = letter;
-    //         newArray[currInput].color = 'yellow';
-
-    //         setInputs(newArray);
-
-    //         if (currInput < 4) {
-    //             setCurrInput(currInput + 1);
-    //         }
-    //     }
-    // }
 
     const handleKeyboard = useCallback(
         (event) => {

@@ -46,17 +46,3 @@ a {
   border-color:rgb(17, 128, 233);
   border-width: 3px;
 }
-
-input{
-  width: 375px
-}
-
-.hidden {
-  background-color: rgba(0,0,0,0.1);
-  color: transparent;
-  caret-color: transparent;
-  /* outline-style: none; */
-  position: absolute;
-  top: 40px;
-  z-index: 1;
-}
