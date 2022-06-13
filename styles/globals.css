@@ -19,6 +19,30 @@ a {
   box-sizing: border-box;
 }
 
+#__next {
+  height: 100%;
+  width: 100%;
+}
+
+.yellow {
+  background-color: #c9b454;
+}
+
+.green {
+  background-color: #6aaa64;
+}
+
+.gray {
+  background-color: #86888a;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  border-color:rgb(17, 128, 233);
+  border-width: 3px;
+}
