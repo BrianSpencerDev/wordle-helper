@@ -75,7 +75,8 @@ function Input(props){
                 if (currInput < 4) {
                     setCurrInput(currInput + 1);
                 }
-            } else {
+            } else if (event.key.length === 1) {
+                
     
                 console.log('hey')
     
