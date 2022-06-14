@@ -40,8 +40,8 @@ function Navbar(){
         </ModalContent>
         </Modal>
         <p>Wordle Helper</p>
-        <IconButton aria-label='toggle night mode' onClick={toggleColorMode}>
-            { colorMode === 'light' ? <MoonIcon/> : <SunIcon/> }
+        <IconButton aria-label='toggle night mode' variant='unstyled' size='lg' onClick={toggleColorMode}>
+            { colorMode === 'dark' ?  <SunIcon/> :  <MoonIcon/> }
         </IconButton>
     </nav>
 
