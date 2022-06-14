@@ -4,7 +4,7 @@ function Results(props){
 
     const words = props.words;
 
-    return <div className="flex flex-wrap justify-center justify-content:space-betweeen max-w-5xl">
+    return <div className="flex flex-row flex-wrap justify-center">
         {words.map( (word, index) => (
             <Word 
                 key={index}

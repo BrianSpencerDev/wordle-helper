@@ -15,7 +15,7 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }) {
   return <ChakraProvider theme={theme}>
-    <Component className=".h-screen .w-screen" {...pageProps} />
+    <Component {...pageProps} />
   </ChakraProvider>
   
 }

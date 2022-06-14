@@ -14,14 +14,14 @@ export default function Home() {
   }
 
   return (
-    <div className="flex justify-center .h-screen .w-screen">
+    <div className='w-max-5xl'>
       <Head>
         <title>Wordle Helper</title>
         <meta name="description" content="Wordle Helper" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='w-full h-full'>
+      <main className='flex flex-col justify-center'>
         <Navbar />
         <Input onSubmit={getWords}/>
         <Results words={words}/>

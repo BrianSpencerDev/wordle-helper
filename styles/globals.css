@@ -19,10 +19,10 @@ a {
   box-sizing: border-box;
 }
 
-#__next {
+/* #__next {
   height: 100%;
   width: 100%;
-}
+} */
 
 .yellow {
   background-color: #c9b454;

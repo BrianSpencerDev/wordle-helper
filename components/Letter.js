@@ -1,14 +1,18 @@
 import { createRouter } from "next/router";
 
+
+// const colors = {
+//     yellow: 'bg-yellow-500',
+//     green: 'bg-green-500',
+// }
+
 function Letter(props){
 
-    //console.log(props.inputs[props.pos])
 
     const input = props.inputs[props.pos]
     const color = input.color;
 
     function handleClick(){
-        console.log("dafuq")
 
         if(input.color === 'yellow'){
             const newArray = [...props.inputs];
