@@ -23,9 +23,6 @@ export default function Home() {
 
       <main className='w-full h-full'>
         <Navbar />
-        <p>Enter up to 5 letters. Only enter a-z, A-Z, or ?. Use ? to fill space</p>
-        <p>Lowercase letters = yellow letters</p>
-        <p>Uppercase letters = green letters</p>
         <Input onSubmit={getWords}/>
         <Results words={words}/>
       </main>
