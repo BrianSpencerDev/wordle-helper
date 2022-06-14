@@ -1,4 +1,4 @@
-import {QuestionOutlineIcon} from '@chakra-ui/icons';
+import {QuestionOutlineIcon, MoonIcon, SunIcon} from '@chakra-ui/icons';
 import {
     Button,
     IconButton, 
@@ -11,17 +11,19 @@ import {
     ModalBody,
     ModalCloseButton,
 } from '@chakra-ui/react';
+import { useColorMode } from '@chakra-ui/color-mode';
 
 function Navbar(){
 
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const { colorMode, toggleColorMode } = useColorMode()
 
     return <nav className="flex justify-between border-b-2 border-gray-300 text-4xl">
         <IconButton variant='unstyled' size='lg' aria-label='How to Modal' onClick={onOpen} icon={<QuestionOutlineIcon />}/>
 
         <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent color='black'>
+        <ModalContent>
           <ModalHeader>How to Use</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -36,8 +38,11 @@ function Navbar(){
             </Button>
           </ModalFooter>
         </ModalContent>
-      </Modal>
+        </Modal>
         <p>Wordle Helper</p>
+        <IconButton aria-label='toggle night mode' onClick={toggleColorMode}>
+            { colorMode === 'light' ? <MoonIcon/> : <SunIcon/> }
+        </IconButton>
     </nav>
 
 }
