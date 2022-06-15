@@ -75,7 +75,7 @@ function Input(props){
                 if (currInput < 4) {
                     setCurrInput(currInput + 1);
                 }
-            } else if (event.key.length === 1) {
+            } else if (event.key.length === 1 && /[a-zA-Z]/.test(event.key)) {
                 
     
                 console.log('hey')

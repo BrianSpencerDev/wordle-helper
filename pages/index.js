@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import Input from '../components/Input'
 import Navbar from '../components/Navbar'
@@ -14,7 +14,7 @@ export default function Home() {
   }
 
   return (
-    <div className='w-max-5xl'>
+    <div>
       <Head>
         <title>Wordle Helper</title>
         <meta name="description" content="Wordle Helper" />
