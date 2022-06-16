@@ -26,7 +26,15 @@ function Input(props){
 
             //if no 'then' words.map in index.js will fail as words will be a promise before an array
             callAPI(enteredInput)
-                .then(data => {props.onSubmit(data)});
+                .then(data => {
+                    if(data.length == 0){
+                        props.onSubmit(['Sorry no answers contain those letters :('])
+                    }
+                    else {
+                        props.onSubmit(data)
+                    }
+                        
+                });
         },
         [props, inputs]
     )
