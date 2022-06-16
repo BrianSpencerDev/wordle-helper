@@ -17,7 +17,9 @@ export default function Home() {
     <div>
       <Head>
         <title>Wordle Helper</title>
-        <meta name="description" content="Wordle Helper" />
+        <meta 
+          name="description" 
+          content="Wordle Helper assists with guessing the daily Wordle. shh your friends don't have to know." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
