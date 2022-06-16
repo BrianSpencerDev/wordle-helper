@@ -4,8 +4,6 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #121212;
-  color: white;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -19,6 +17,25 @@ a {
   box-sizing: border-box;
 }
 
+.yellow {
+  background-color: #c9b454;
+}
+
+.green {
+  background-color: #6aaa64;
+}
+
+.gray {
+  background-color: #86888a;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  border-color:rgb(17, 128, 233);
+  border-width: 3px;
+}
