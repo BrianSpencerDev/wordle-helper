@@ -83,10 +83,24 @@ function Input(props){
                 if (currInput < 4) {
                     setCurrInput(currInput + 1);
                 }
+            } else if (event.key === "ArrowLeft") {
+                if (currInput < 1){ 
+                    setCurrInput(4); 
+                }
+                else {
+                    setCurrInput(currInput - 1)
+                }
+            } else if (event.key === "ArrowRight") {
+                if (currInput > 3){ 
+                    setCurrInput(0); 
+                }
+                else {
+                    setCurrInput(currInput + 1)
+                }
             } else if (event.key.length === 1 && /[a-zA-Z]/.test(event.key)) {
                 
     
-                console.log('hey')
+                //console.log('hey')
     
                 const letter = event.key.toUpperCase()
     
